@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-
+import { BrandService } from './brands/service/brands.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core'
 })
 export class AppComponent {
   title = 'Concesionario';
+  constructor(private brandService: BrandService) {}
+
+  ngOnInit(): void {
+    this.brandService.getBrands();
+  }
 
 }
