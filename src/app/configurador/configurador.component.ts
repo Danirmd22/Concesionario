@@ -6,11 +6,7 @@ import { ModelSelectionComponent } from './model-selection/model-selection.compo
 
 @Component({
   selector: 'app-configurador',
-  template: `
-    <ng-container #container></ng-container>
-    <button (click)="previous()">Anterior</button>
-    <button (click)="next()">Siguiente</button>
-  `,
+  templateUrl: './configurador.component.html',
 })
 export class ConfiguradorComponent {
   @ViewChild('container', { read: ViewContainerRef })
