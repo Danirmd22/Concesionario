@@ -4,7 +4,7 @@ export interface BrandResponse {
 
  export interface Brand {
     id:    number;
-    brand: string;
+    brandName: string;
     image: string;
 
  }

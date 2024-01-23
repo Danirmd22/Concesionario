@@ -1,3 +1,54 @@
-<div>
-  <app-card></app-card>
+<div class="w-[90%] m-auto py-16">
+<!-- Breadcrumb -->
+<div class="w-fit flex flex-row-reverse items-center px-7 py-2 gap-4 bg-[#171616] rounded-3xl">
+  <div class="text-[#98928f] text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+      Resumen
+  </div>
+  <div class="text-[#98928f] text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+      Opcionales
+  </div>
+  <div class="text-[#98928f] text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+      Diseño
+  </div>
+  <div class="text-[#98928f]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+      Motor
+  </div>
+  <div class="text-[#98928f]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+      Versión
+  </div>
+  <div class="text-[#ece9e1]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+      Modelo
+  </div>
+  <div class="text-[#ece9e1]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+      Marcas
+  </div>
 </div>
+  <div class="w-full h-auto">
+    <div class="h-5 flex items-center" style="margin-left: 68px; margin-top: 30px;">
+      <div class="text-stone-500 text-xl font-normal leading-tight">
+        Bienvenido al configurador</div>
+    </div>
+    <div class="text-neutral-900 text-[34.17px] font-light leading-9" style="margin-left: 121px; margin-top: 50px;">
+      Empieza eligiendo tu marca favorita.</div>
+    <div class="text-neutral-900 text-[63px] font-extrabold leading-9" style="margin-left: 68px; margin-top: -40px;"> 1. </div>
+
+    <div class="w-full flex flex-row justify-center items-center">
+      <div class="" *ngFor="let brand of Brands;">
+        <img class="w-[197.19px] rounded-tl-lg rounded-tr-lg" src="{{brand.image}}" />
+      </div>
+    </div>
+
+    <div class="w-48 h-10 flex justify-center items-center bg-neutral-900 rounded-[90px]">
+      <div class="w-[113px] h-5 text-white text-base font-normal leading-tight">
+        Volver al inicio</div>
+    </div>
+
+    <div class="w-[187px] h-16 flex">
+      <div class="w-[169px] h-10 bg-neutral-900 rounded-[90px]">
+      <div class="w-[106px] h-5 text-white text-base font-normal leading-tight">
+        Próximo paso</div></div>
+
+    </div>
+  </div>
+</div>
+

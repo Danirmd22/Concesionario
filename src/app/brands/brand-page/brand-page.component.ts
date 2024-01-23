@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { BrandService } from '../service/brands.service';
 @Component({
   selector: 'app-brand-page',
   templateUrl: './brand-page.component.html',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class BrandPageComponent {
 
+  constructor(public brandsService: BrandService) {}
 
 
 }
