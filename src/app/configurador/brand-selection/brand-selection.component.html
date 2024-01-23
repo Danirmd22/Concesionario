@@ -1,1 +1,41 @@
-<app-card-list [Brands]="brandsService.brandList"></app-card-list>
+<div class="">
+    <div class="w-fit flex flex-row-reverse items-center px-7 py-2 gap-4 bg-[#171616] rounded-3xl">
+        <div class="text-[#98928f] text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+            Resumen
+        </div>
+        <div class="text-[#98928f] text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+            Opcionales
+        </div>
+        <div class="text-[#98928f] text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+            Diseño
+        </div>
+        <div class="text-[#98928f]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+            Motor
+        </div>
+        <div class="text-[#98928f]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+            Versión
+        </div>
+        <div class="text-[#ece9e1]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+            Modelo
+        </div>
+        <div class="text-[#ece9e1]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+            Marcas
+        </div>
+    </div>
+
+    <div class="mt-10">
+        <p class="text-lg mb-3">Bienvenido al configurador</p>
+        <div class="flex text-3xl">
+            <span class="font-extrabold text-6xl pr-1">1.</span>
+            <h1 class="pt-2.5 font-light">Empieza eligiendo tu marca favorita</h1>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="flex flex-col mt-5">
+        <p><span class="font-bold">4</span> marcas disponible</p>
+    </div>
+
+    <!-- Listado de marcas -->
+    <app-card-list [Brands]="brandsService.brandList"></app-card-list>
+</div>
