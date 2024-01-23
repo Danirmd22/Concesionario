@@ -1,5 +1,5 @@
 import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
-import { FormStateService } from './form-state.service';
+import { FormStateService } from './service/formStateService.service';
 import { BrandSelectionComponent } from './brand-selection/brand-selection.component';
 import { ModelSelectionComponent } from './model-selection/model-selection.component';
 // ... importa los demás componentes aquí
@@ -13,7 +13,8 @@ import { ModelSelectionComponent } from './model-selection/model-selection.compo
   `,
 })
 export class ConfiguradorComponent {
-  @ViewChild('container', { read: ViewContainerRef }) container: ViewContainerRef;
+  @ViewChild('container', { read: ViewContainerRef })
+  container!: ViewContainerRef;
 
   private components = [
     BrandSelectionComponent,

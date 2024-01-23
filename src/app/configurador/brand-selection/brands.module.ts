@@ -1,22 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrandPageComponent } from './brand-page/brand-page.component';
-
+import { BrandSelectionComponent } from './brand-selection.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 
 
 
 @NgModule({
   declarations: [
-    BrandPageComponent,
-    CardListComponent,
-   
+    BrandSelectionComponent,
+    CardListComponent
   ],
   imports: [
     CommonModule
   ],
   exports:[
-    BrandPageComponent
+    BrandSelectionComponent,
+    CardListComponent
   ]
 })
-export class BrandsModule { }
+export class BrandsModule {}
