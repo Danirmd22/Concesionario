@@ -1,4 +1,29 @@
 <div class="w-[90%] m-auto py-16">
+
+  <div class="w-fit flex flex-row-reverse items-center px-7 py-2 gap-4 bg-[#171616] rounded-3xl">
+    <div class="text-[#98928f] text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+        Resumen
+    </div>
+    <div class="text-[#98928f] text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+        Opcionales
+    </div>
+    <div class="text-[#98928f] text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+        Diseño
+    </div>
+    <div class="text-[#98928f]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+        Motor
+    </div>
+    <div class="text-[#98928f]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+        Versión
+    </div>
+    <div class="text-[#ece9e1]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+        Modelo
+    </div>
+    <div class="text-[#ece9e1]  text-sm font-normal tracking-[0] leading-[20px] whitespace-nowrap">
+        Marcas
+    </div>
+</div>
+
   <div class="mt-10">
       <p class="text-lg mb-3">Bienvenido al configurador</p>
       <div class="flex text-3xl">
@@ -16,9 +41,9 @@
 
 <!-- Listado de las Marcas -->
 <div>
-    <div class="flex flex-wrap gap-4 mt-5">
-        <div class="flex flex-col w-[32%] justify-center items-center p-4" *ngFor="let brand of Brands">
-            <img class="w-64" src="{{brand.image}}" alt="">
+    <div class="flex flex-wrap gap-4 mt-5 justify-center items-center">
+        <div class="flex justify-center items-center p-4" *ngFor="let brand of Brands">
+            <img class="w-40" src="{{brand.image}}" alt="">
         </div>
 
     </div>
