@@ -20,6 +20,8 @@ export class BrandService {
         if (resp) {
           this.brandList = resp; // Asigna resp a brandList directamente
           console.log({ brands: this.brandList });
+          console.log("Brandlist:",this.brandList[0].brandName);
+
         } else {
           console.error('La respuesta del servidor es nula o indefinida');
         }
@@ -28,3 +30,4 @@ export class BrandService {
       });
   }
 }
+
