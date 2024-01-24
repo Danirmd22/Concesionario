@@ -50,8 +50,8 @@
         <div  class="flex flex-wrap gap-4 mt-6">
             <div *ngFor="let model of models" class="flex flex-col w-[32%] justify-between bg-[#F8F8F6] text-center p-4 py-6">
                 <h2 class="font-bold text-3xl font-['Poppins']">{{ model.model }}</h2>
-                <img class="w-[350px] m-auto mb-10" src="{{ model.image }}" >
-                <p>Desde <span class="font-semibold text-lg">{{model.price}}€</span></p>
+                <img class="w-[350px] scale-110 m-auto mb-20 mt-8" src="{{ model.image }}" >
+                <p class="font-semibold text-xl">Desde <span class="font-bold text-lg">{{model.price}}€</span></p>
             </div>
         </div>
     </div>

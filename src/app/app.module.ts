@@ -11,6 +11,11 @@ import { ModelService } from './models/service/models.service';
 import { ModelsSelectionModule } from './configurador/model-selection/models-selection.module';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import { LOCALE_ID } from '@angular/core';
+
+registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
@@ -34,7 +39,7 @@ import { CommonModule } from '@angular/common';
     ModelsModule,
     ModelsSelectionModule,
   ],
-  providers: [BrandService, ModelService],
+  providers: [BrandService, ModelService, { provide: LOCALE_ID, useValue: 'es-ES' }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

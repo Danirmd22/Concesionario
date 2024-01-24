@@ -9,6 +9,9 @@ import { ModelService } from './service/models.service';
 
 export class ModelsComponent implements OnInit{
   models: Model[] = [];
+  showSidebar = false;
+  maxPrice = Infinity
+  dropdownOpen = false;
 
   constructor(public modelService: ModelService) {}
 
@@ -17,5 +20,14 @@ export class ModelsComponent implements OnInit{
       this.models = models;
       console.log(this.models);
     });
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  };
+
+
+  toggleSidebar() {
+    this.showSidebar = !this.showSidebar;
   }
 }
