@@ -2,6 +2,10 @@ import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef } from
 import { FormStateService } from './service/formStateService.service';
 import { BrandSelectionComponent } from './brand-selection/brand-selection.component';
 import { ModelSelectionComponent } from './model-selection/model-selection.component';
+
+
+
+
 // ... importa los demás componentes aquí
 
 @Component({
@@ -9,6 +13,9 @@ import { ModelSelectionComponent } from './model-selection/model-selection.compo
   templateUrl: './configurador.component.html',
 })
 export class ConfiguradorComponent {
+
+
+
   @ViewChild('container', { read: ViewContainerRef })
   container!: ViewContainerRef;
 
@@ -20,7 +27,9 @@ export class ConfiguradorComponent {
 
   constructor(
     private formState: FormStateService,
-    private resolver: ComponentFactoryResolver
+    private resolver: ComponentFactoryResolver,
+
+
   ) {
     this.formState.step$.subscribe(step => {
       this.container.clear();
@@ -36,4 +45,13 @@ export class ConfiguradorComponent {
   previous() {
     this.formState.previousStep();
   }
+
+
+
+
 }
+
+
+
+
+
