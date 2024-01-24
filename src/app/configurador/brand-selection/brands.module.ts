@@ -5,10 +5,12 @@ import { CardListComponent } from './components/card-list/card-list.component';
 
 
 
+
 @NgModule({
   declarations: [
     BrandSelectionComponent,
     CardListComponent
+
   ],
   imports: [
     CommonModule

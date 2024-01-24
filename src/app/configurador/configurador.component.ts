@@ -10,11 +10,17 @@ import { BrandSelectionComponent } from './brand-selection/brand-selection.compo
 import { ModelSelectionComponent } from './model-selection/model-selection.component';
 // ... importa los demás componentes aquí
 
+
+
 @Component({
   selector: 'app-configurador',
   templateUrl: './configurador.component.html',
 })
 export class ConfiguradorComponent {
+
+
+
+
   @ViewChild('container', { read: ViewContainerRef })
   container!: ViewContainerRef;
 
@@ -44,4 +50,10 @@ export class ConfiguradorComponent {
   previous() {
     this.formState.previousStep();
   }
+
+
+
+
+
+
 }
