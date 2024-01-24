@@ -1,16 +1,16 @@
+import { ModelsComponent } from './models.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModelSelectionComponent } from './model-selection.component';
 
 @NgModule({
   declarations: [
-    ModelSelectionComponent,
+    ModelsComponent,
   ],
   imports: [
     CommonModule
-  ],
+    ],
   exports: [
-    ModelSelectionComponent,
+    ModelsComponent,
   ],
 })
 export class ModelsModule {}

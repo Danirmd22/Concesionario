@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Model } from '../../models/interfaces/model.interface';
-import { ModelService } from '../../models/service/models.service';
+import { Model } from './interfaces/model.interface';
+import { ModelService } from './service/models.service';
 
 @Component({
-  selector: 'app-models-page',
-  templateUrl: './model-selection.component.html',
+  selector: 'app-models',
+  templateUrl: './models.component.html',
 })
-export class ModelSelectionComponent implements OnInit {
+
+export class ModelsComponent implements OnInit{
   models: Model[] = [];
 
   constructor(public modelService: ModelService) {}
