@@ -8,13 +8,25 @@ export class FormStateService {
   private _step = new BehaviorSubject<number>(0);
   step$ = this._step.asObservable();
 
+  private currentStep = -1;
+  private maxSteps = 3;
+
+  constructor() {
+    // Emitir el valor inicial
+    this._step.next(0);
+  }
+
   nextStep() {
-    this._step.next(this._step.value + 1);
+    if (this.currentStep < this.maxSteps) {
+      this.currentStep++;
+      this._step.next(this.currentStep); // Aquí está la corrección
+    }
   }
 
   previousStep() {
-    if (this._step.value > 0) {
-      this._step.next(this._step.value - 1);
+    if (this.currentStep > 0) {
+      this.currentStep--;
+      this._step.next(this.currentStep); // Aquí está la corrección
     }
   }
 }
