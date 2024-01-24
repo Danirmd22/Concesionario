@@ -1,10 +1,9 @@
 export interface BrandResponse {
-  brand: Brand[]
- }
+   brand: Brand[];
+}
 
- export interface Brand {
-    id:    number;
-    brandName: string;
-    image: string;
-
- }
+export interface Brand {
+   id: number;
+   brandName: string;
+   image: string;
+}
