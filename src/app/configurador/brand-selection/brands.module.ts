@@ -11,7 +11,7 @@ import { CardListComponent } from './components/card-list/card-list.component';
     CardListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports:[
     BrandSelectionComponent,
