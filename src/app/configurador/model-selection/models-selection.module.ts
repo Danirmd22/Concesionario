@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModelSelectionComponent } from './model-selection.component';
+import { SelectedBrandService } from '../../shared/services/selected-brand.service';
 
 @NgModule({
   declarations: [
@@ -12,5 +13,8 @@ import { ModelSelectionComponent } from './model-selection.component';
   exports: [
     ModelSelectionComponent,
   ],
+  providers: [
+    SelectedBrandService
+  ]
 })
 export class ModelsSelectionModule {}

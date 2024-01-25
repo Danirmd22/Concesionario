@@ -21,11 +21,16 @@ export class CardListComponent {
   @Input()
   public Brands: Brand[] = [];
 
-  onBrandSelected(idMarca: number) {
+  onBrandSelected(idMarca: number | null) {
+    if (idMarca === null) {
+      console.error('idMarca es nulo');
+      return;
+    }
+
     this.selectedBrandId = idMarca;
     this.modelService.getModelsByBrand(idMarca).subscribe(models => {
       this.models = models;
-      console.log(this.models); // Mover aquí
+      console.log(this.models);
     });
   }
 }

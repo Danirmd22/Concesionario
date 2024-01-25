@@ -39,7 +39,7 @@ registerLocaleData(localeEs);
     ModelsModule,
     ModelsSelectionModule,
   ],
-  providers: [BrandService, ModelService, { provide: LOCALE_ID, useValue: 'es-ES' }],
+  providers: [BrandService, ModelService,  { provide: LOCALE_ID, useValue: 'es-ES' }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
