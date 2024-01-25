@@ -18,9 +18,6 @@ import { ModelSelectionComponent } from './model-selection/model-selection.compo
 })
 export class ConfiguradorComponent {
 
-
-
-
   @ViewChild('container', { read: ViewContainerRef })
   container!: ViewContainerRef;
 

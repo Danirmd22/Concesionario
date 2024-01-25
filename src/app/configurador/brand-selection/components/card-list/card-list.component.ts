@@ -1,8 +1,7 @@
+import { ModelService } from './../../../../models/service/models.service';
 import { Component, Input, } from '@angular/core';
-import { BrandService  } from '../../service/brands.service';
 import { Brand } from '../../interfaces/brand.interface';
-
-
+import { Model } from '../../../../models/interfaces/model.interface';
 
 
 @Component({
@@ -12,14 +11,21 @@ import { Brand } from '../../interfaces/brand.interface';
 })
 
 export class CardListComponent {
+  models: Model[] = [];
+  selectedBrandId: number | null = null;
 
-
-  constructor(private brandsService: BrandService) {
-
+  constructor(
+    public modelService: ModelService
+    ) {
   }
   @Input()
   public Brands: Brand[] = [];
 
-
-
+  onBrandSelected(idMarca: number) {
+    this.selectedBrandId = idMarca;
+    this.modelService.getModelsByBrand(idMarca).subscribe(models => {
+      this.models = models;
+      console.log(this.models); // Mover aquí
+    });
+  }
 }

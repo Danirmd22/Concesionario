@@ -18,7 +18,7 @@ export class ModelService {
     return this.http.get<Model[]>(url);
   }
 
-  getModelsByBrand(idMarca: string): Observable<Model[]> {
+  getModelsByBrand(idMarca: number): Observable<Model[]> {
     const url = `${this.serviceUrl}/brands/${idMarca}/models`;
     return this.http.get<Model[]>(url);
   }
