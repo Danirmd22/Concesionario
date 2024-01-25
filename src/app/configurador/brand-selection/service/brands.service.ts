@@ -5,6 +5,7 @@ import { Brand } from '../interfaces/brand.interface';
 @Injectable({ providedIn: 'root' })
 export class BrandService {
   public brandList: Brand[] = [];
+  public brandName: string = '';
 
   constructor(private http: HttpClient) {
     console.log('Brands Service Ready');
@@ -28,6 +29,10 @@ export class BrandService {
       }, error => {
         console.error('Error al obtener las marcas:', error);
       });
+  }
+
+  getBrandById(id: number) {
+    return this.http.get<Brand>(`${this.serviceUrl}/${id}`);
   }
 }
 

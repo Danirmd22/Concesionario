@@ -3,6 +3,7 @@ import { Component, Input, } from '@angular/core';
 import { Brand } from '../../interfaces/brand.interface';
 import { Model } from '../../../../models/interfaces/model.interface';
 import { SelectedBrandService } from '../../../services/selected-brand.service';
+import { BrandService } from '../../service/brands.service';
 
 
 @Component({
@@ -13,11 +14,13 @@ import { SelectedBrandService } from '../../../services/selected-brand.service';
 
 export class CardListComponent {
   models: Model[] = [];
+  selectedBrand: Brand | null = null;
   selectedBrandId: number | null = null;
 
   constructor(
     public modelService: ModelService,
-    public selectedBrandService: SelectedBrandService
+    public selectedBrandService: SelectedBrandService,
+    public brandService: BrandService,
     ) {
   }
   @Input()

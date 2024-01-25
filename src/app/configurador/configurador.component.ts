@@ -47,9 +47,6 @@ export class ConfiguradorComponent {
     this.formState.previousStep();
   }
 
-
-
-
-
-
 }
+
+

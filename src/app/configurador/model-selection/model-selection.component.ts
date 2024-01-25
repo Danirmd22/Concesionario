@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Model } from '../../models/interfaces/model.interface';
-import { ModelService } from '../../models/service/models.service';
 import { SelectedBrandService } from '../services/selected-brand.service';
 
 @Component({
@@ -9,6 +8,7 @@ import { SelectedBrandService } from '../services/selected-brand.service';
 })
 export class ModelSelectionComponent implements OnInit {
   models: Model[] = [];
+  selectBrand: string = '';
   loading = false;
 
   constructor(private selectedBrandService: SelectedBrandService) {}
