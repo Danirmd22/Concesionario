@@ -1,13 +1,12 @@
 import {
   Component,
-  ComponentFactoryResolver,
   Type,
   ViewChild,
-  ViewContainerRef,
+  ViewContainerRef
 } from '@angular/core';
-import { FormStateService } from './service/formStateService.service';
 import { BrandSelectionComponent } from './brand-selection/brand-selection.component';
 import { ModelSelectionComponent } from './model-selection/model-selection.component';
+import { FormStateService } from './services/formStateService.service';
 // ... importa los demás componentes aquí
 
 

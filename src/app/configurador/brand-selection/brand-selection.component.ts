@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { BrandService } from './service/brands.service';
-import { SelectedBrandService } from '../../shared/services/selected-brand.service';
 
 @Component({
   selector: 'app-brand-selection',
@@ -9,16 +8,14 @@ import { SelectedBrandService } from '../../shared/services/selected-brand.servi
 export class BrandSelectionComponent {
   constructor(
     public brandsService: BrandService,
-    private selectedBrandService: SelectedBrandService
   ) {}
 
   // En tu componente de selección de marca
   onBrandSelected(idMarca: number) {
+    console.log('idMarca', idMarca);
     if (idMarca === null) {
       console.error('idMarca es nulo');
       return;
     }
-
-    this.selectedBrandService.changeSelectedBrand(idMarca);
   }
 }

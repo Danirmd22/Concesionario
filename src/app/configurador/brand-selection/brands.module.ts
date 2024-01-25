@@ -10,12 +10,9 @@ import { CardListComponent } from './components/card-list/card-list.component';
   declarations: [
     BrandSelectionComponent,
     CardListComponent
-
   ],
   imports: [
     CommonModule
-
-
   ],
   exports:[
     BrandSelectionComponent,

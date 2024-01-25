@@ -2,6 +2,7 @@ import { ModelService } from './../../../../models/service/models.service';
 import { Component, Input, } from '@angular/core';
 import { Brand } from '../../interfaces/brand.interface';
 import { Model } from '../../../../models/interfaces/model.interface';
+import { SelectedBrandService } from '../../../services/selected-brand.service';
 
 
 @Component({
@@ -15,7 +16,8 @@ export class CardListComponent {
   selectedBrandId: number | null = null;
 
   constructor(
-    public modelService: ModelService
+    public modelService: ModelService,
+    public selectedBrandService: SelectedBrandService
     ) {
   }
   @Input()
@@ -30,7 +32,7 @@ export class CardListComponent {
     this.selectedBrandId = idMarca;
     this.modelService.getModelsByBrand(idMarca).subscribe(models => {
       this.models = models;
-      console.log(this.models);
+      this.selectedBrandService.changeModels(models);
     });
   }
 }

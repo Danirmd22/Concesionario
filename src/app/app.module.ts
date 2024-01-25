@@ -8,6 +8,7 @@ import { BrandsModule } from './configurador/brand-selection/brands.module';
 import { BrandService } from './configurador/brand-selection/service/brands.service';
 import { ModelsModule } from './models/models.module';
 import { ModelService } from './models/service/models.service';
+import { SelectedBrandService } from './configurador/services/selected-brand.service';
 import { ModelsSelectionModule } from './configurador/model-selection/models-selection.module';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
@@ -39,7 +40,7 @@ registerLocaleData(localeEs);
     ModelsModule,
     ModelsSelectionModule,
   ],
-  providers: [BrandService, ModelService,  { provide: LOCALE_ID, useValue: 'es-ES' }],
+  providers: [BrandService, ModelService, SelectedBrandService ,{ provide: LOCALE_ID, useValue: 'es-ES' }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
