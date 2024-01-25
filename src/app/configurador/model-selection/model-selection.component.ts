@@ -6,15 +6,18 @@ import { ModelService } from '../../models/service/models.service';
   selector: 'app-models-page',
   templateUrl: './model-selection.component.html',
 })
+
 export class ModelSelectionComponent implements OnInit {
   models: Model[] = [];
+  loading = false;
 
   constructor(public modelService: ModelService) {}
 
   ngOnInit(): void {
+    this.loading = true;
     this.modelService.getModels().subscribe((models: Model[]) => {
       this.models = models;
-      console.log(this.models);
+      this.loading = false;
     });
   }
 }

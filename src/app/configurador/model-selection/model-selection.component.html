@@ -46,6 +46,14 @@
     </div>
 
     <!-- Listado de los modelos -->
+    <div *ngIf="loading; else modelsLoaded">
+        <div class="flex flex-wrap gap-4 mt-6">
+            <div class="flex flex-col lg:w-[32%] h-64 justify-between bg-[#F8F8F6] text-center p-4 py-6">
+                
+            </div>
+        </div>
+    </div>
+    <ng-template #modelsLoaded>
     <div>
         <div class="flex flex-wrap gap-4 mt-6">
             <div *ngFor="let model of models"
@@ -57,4 +65,5 @@
             </div>
         </div>
     </div>
+    </ng-template>
 </div>
