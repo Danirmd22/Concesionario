@@ -42,16 +42,18 @@
             </svg>
             <span>Filtros</span>
         </div>
-        <p><span class="font-bold">3</span> modelos disponible</p>
+        <p><span class="font-bold">{{models.length}}</span> modelos disponible</p>
     </div>
 
     <!-- Listado de los modelos -->
     <div>
-        <div  class="flex flex-wrap gap-4 mt-6">
-            <div *ngFor="let model of models" class="flex flex-col w-[32%] justify-between bg-[#F8F8F6] text-center p-4 py-6">
+        <div class="flex flex-wrap gap-4 mt-6">
+            <div *ngFor="let model of models"
+                class="flex flex-col lg:w-[32%] justify-between bg-[#F8F8F6] text-center p-4 py-6">
                 <h2 class="font-bold text-3xl font-['Poppins']">{{ model.model }}</h2>
-                <img class="w-[350px] m-auto mb-10" src="{{ model.image }}" >
-                <p>Desde <span class="font-semibold text-lg">{{model.price}}€</span></p>
+                <img class="w-[350px] h-[140px] object-cover scale-105 m-auto mb-10 mt-4" src="{{ model.image }}">
+                <p class="font-normal text-lg">Desde <span class="font-bold text-2xl">{{model.price |
+                        number:'1.0-0'}}€</span></p>
             </div>
         </div>
     </div>

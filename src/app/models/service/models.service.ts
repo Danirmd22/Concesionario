@@ -11,13 +11,15 @@ export class ModelService {
     console.log('Models Service Ready');
   }
 
-  private serviceUrl = "https://concesionario.up.railway.app/api/v1/models"
+  private serviceUrl = "https://concesionario.up.railway.app/api/v1"
 
   getModels(): Observable<Model[]> {
-    return this.http.get<Model[]>(this.serviceUrl);
+    const url = `${this.serviceUrl}/models`;
+    return this.http.get<Model[]>(url);
   }
 
-  getModelsByBrand(): Observable<Model[]> {
-    return this.http.get<Model[]>(this.serviceUrl);
+  getModelsByBrand(idMarca: string): Observable<Model[]> {
+    const url = `${this.serviceUrl}/brands/${idMarca}/models`;
+    return this.http.get<Model[]>(url);
   }
 }
