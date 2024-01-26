@@ -29,4 +29,8 @@ export class FormStateService {
       this._step.next(this.currentStep); // Aquí está la corrección
     }
   }
+  //devuelve valor del paso actual
+  currentStepFn(){
+    return this.currentStep;
+      }
 }

@@ -41,12 +41,32 @@ export class ConfiguradorComponent {
 
   next() {
     this.formState.nextStep();
+    this.breadCrubNext();
   }
 
   previous() {
     this.formState.previousStep();
+    this.breadCrubPrevious();
   }
 
+//LOGICA PARA BREAD CRUMB HACIA ADELANTE
+  breadCrubNext(){
+    var vDom = "a"+this.formState.currentStepFn();
+const editDom  = document.getElementById(vDom);
+  editDom!.style.color = ("#ece9e1");
+
+
+  }
+
+//LOGICA PARA BREAD CRUMB HACIA ATRAS
+
+  breadCrubPrevious(){
+    var vDom = "a"+(this.formState.currentStepFn()+1);
+const editDom  = document.getElementById(vDom);
+  editDom!.style.color = ("#98928f");
+
+
+  }
 }
 
 
