@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import { LOCALE_ID } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localeEs);
 
@@ -31,7 +32,8 @@ registerLocaleData(localeEs);
     BrandsModule,
     ModelsModule,
     ModelsSelectionModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
 
   ],
   exports: [
