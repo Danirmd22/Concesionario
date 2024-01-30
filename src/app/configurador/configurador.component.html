@@ -27,8 +27,6 @@
 </div>
 
 <!-- Bread crumb hasta aqui -->
-
-
     <ng-container #container></ng-container>
     <div class="flex items-center gap-2 mt-10">
         <button (click)="previous()"
@@ -41,7 +39,7 @@
             </svg>
             Atrás
         </button>
-        <button (click)="next()"
+        <button #botonSiguiente (click)="next()"
             class="flex items-center justify-center md:w-fit w-1/2 bg-[#171616] text-[#ece9e1] px-7 py-1 rounded-3xl">
             Siguiente
             <svg width="24" height="24" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

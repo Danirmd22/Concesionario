@@ -11,11 +11,16 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 
+
+
+
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     DialogComponent,
+   
+
   ],
   imports: [
     CommonModule,
@@ -25,6 +30,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     FormsModule,
     MatDialogModule,
+
 
   ],
   exports: [

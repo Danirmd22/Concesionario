@@ -7,6 +7,10 @@ import {
 import { BrandSelectionComponent } from './brand-selection/brand-selection.component';
 import { ModelSelectionComponent } from './model-selection/model-selection.component';
 import { FormStateService } from './services/formStateService.service';
+import { ElementRef, AfterViewInit } from '@angular/core';
+
+
+
 // ... importa los demás componentes aquí
 
 
@@ -15,8 +19,8 @@ import { FormStateService } from './services/formStateService.service';
   selector: 'app-configurador',
   templateUrl: './configurador.component.html',
 })
-export class ConfiguradorComponent {
-
+export class ConfiguradorComponent implements AfterViewInit {
+  @ViewChild('botonSiguiente', { static: true }) botonSiguiente!: ElementRef;
   @ViewChild('container', { read: ViewContainerRef })
   container!: ViewContainerRef;
 
@@ -38,10 +42,19 @@ export class ConfiguradorComponent {
       this.container.createComponent(factory);
     });
   }
+// Boton automatico de next
+  ngAfterViewInit(): void {
+    // Simular un clic en el botón "Siguiente" al cargar la página
+    setTimeout(() => {
+      this.botonSiguiente.nativeElement.click();
+    });
+  }
+
 
   next() {
     this.formState.nextStep();
     this.breadCrubNext();
+
   }
 
   previous() {
