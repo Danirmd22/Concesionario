@@ -16,25 +16,15 @@ export class HeaderComponent {
   openDialog() {
     let dialogRef;
 
-    if(screen.width<500){
-      dialogRef = this.dialog.open(DialogComponent, {
-        maxWidth: '100vW',
-        height: '80%',
-        width: '100%',
-        position: {bottom: '0px'}
+    dialogRef = this.dialog.open(DialogComponent, {
+      maxWidth: '100vW',
+      height: '80%',
+      width: '100%',
+      position: {bottom: '0px'},
 
-      });
-    }else{
-      dialogRef = this.dialog.open(DialogComponent, {
-        maxWidth: '100vW',
-        height: '80%',
-        width: '100%',
-        position: {bottom: '0px'},
+    });
 
-      });
-    }
 
-    
   }
 
 }
