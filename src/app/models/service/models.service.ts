@@ -8,7 +8,6 @@ export class ModelService {
   public ModelList: Model[] = [];
 
   constructor(private http: HttpClient) {
-    console.log('Models Service Ready');
   }
 
   private serviceUrl = "https://concesionario.up.railway.app/api/v1"

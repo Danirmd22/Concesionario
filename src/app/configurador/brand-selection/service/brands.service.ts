@@ -8,7 +8,7 @@ export class BrandService {
   public brandName: string = '';
 
   constructor(private http: HttpClient) {
-    console.log('Brands Service Ready');
+    
   }
 
   private serviceUrl = "https://concesionario.up.railway.app/api/v1/brands"
@@ -16,12 +16,11 @@ export class BrandService {
   getBrands(): void {
     this.http.get<Brand[]>(this.serviceUrl)
       .subscribe((resp: Brand[]) => {
-        console.log(resp); // Imprime la respuesta completa
+         // Imprime la respuesta completa
 
         if (resp) {
           this.brandList = resp; // Asigna resp a brandList directamente
-          console.log({ brands: this.brandList });
-          console.log("Brandlist:",this.brandList[0].brandName);
+
 
         } else {
           console.error('La respuesta del servidor es nula o indefinida');
