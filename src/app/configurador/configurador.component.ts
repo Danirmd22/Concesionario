@@ -1,15 +1,8 @@
-import {
-  Component,
-  Type,
-  ViewChild,
-  ViewContainerRef
-} from '@angular/core';
+import { Component, Type, ViewChild, ViewContainerRef } from '@angular/core';
 import { BrandSelectionComponent } from './brand-selection/brand-selection.component';
 import { ModelSelectionComponent } from './model-selection/model-selection.component';
 import { FormStateService } from './services/formStateService.service';
 import { ElementRef, AfterViewInit } from '@angular/core';
-
-
 
 @Component({
   selector: 'app-configurador',
@@ -39,19 +32,25 @@ export class ConfiguradorComponent implements AfterViewInit {
     });
   }
 
-// Boton automatico de next
+  // Boton automatico de next
   ngAfterViewInit(): void {
+    this.formState.step$.subscribe((step) => {
+      Promise.resolve().then(() => {
+        this.container.clear();
+        const factory = this.createComponent(step);
+        this.container.createComponent(factory);
+      });
+    });
+
     // Simular un clic en el botón "Siguiente" al cargar la página
     setTimeout(() => {
       this.botonSiguiente.nativeElement.click();
     });
   }
 
-
   next() {
     this.formState.nextStep();
     this.breadCrubNext();
-
   }
 
   previous() {
@@ -59,24 +58,21 @@ export class ConfiguradorComponent implements AfterViewInit {
     this.breadCrubPrevious();
   }
 
-//LOGICA PARA BREAD CRUMB HACIA ADELANTE
-  breadCrubNext(){
-    var vDom = "a"+this.formState.currentStepFn();
-const editDom  = document.getElementById(vDom);
-  editDom!.style.color = ("#ece9e1");
-
-
+  currentStep() {
+    return this.formState.currentStepFn();
   }
 
-//LOGICA PARA BREAD CRUMB HACIA ATRAS
+  //LOGICA PARA BREAD CRUMB HACIA ADELANTE
+  breadCrubNext() {
+    var vDom = 'a' + this.formState.currentStepFn();
+    const editDom = document.getElementById(vDom);
+    editDom!.style.color = '#ece9e1';
+  }
 
-  breadCrubPrevious(){
-    var vDom = "a"+(this.formState.currentStepFn()+1);
-const editDom  = document.getElementById(vDom);
-  editDom!.style.color = ("#98928f");
-
-
+  //LOGICA PARA BREAD CRUMB HACIA ATRAS
+  breadCrubPrevious() {
+    var vDom = 'a' + (this.formState.currentStepFn() + 1);
+    const editDom = document.getElementById(vDom);
+    editDom!.style.color = '#98928f';
   }
 }
-
-

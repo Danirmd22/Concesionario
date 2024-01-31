@@ -16,6 +16,7 @@ import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import { LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfiguradorModule } from './configurador/configurador.module';
 
 registerLocaleData(localeEs);
 
@@ -40,6 +41,7 @@ registerLocaleData(localeEs);
     SharedModule,
     BrandsModule,
     ModelsModule,
+    ConfiguradorModule,
     ModelsSelectionModule,
   ],
   providers: [BrandService, ModelService, SelectedBrandService ,{ provide: LOCALE_ID, useValue: 'es-ES' }],

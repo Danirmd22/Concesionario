@@ -32,6 +32,13 @@ export class CardListComponent {
       return;
     }
 
+    const selectedBrand = this.Brands.find((brand) => brand.id === idMarca);
+    if (selectedBrand !== undefined) {
+      this.selectedBrandService.changeSelectedBrand(selectedBrand);
+    } else {
+      this.selectedBrandService.changeSelectedBrand(null);
+    }
+
     this.selectedBrandId = idMarca;
     this.modelService.getModelsByBrand(idMarca).subscribe(models => {
       this.models = models;
