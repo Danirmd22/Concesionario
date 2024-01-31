@@ -1,32 +1,33 @@
 <div class="w-[90%] m-auto pt-4 pb-16">
 
- <!-- Bread crumb -->
+    <!-- Bread crumb -->
 
- <div  class="w-fit flex flex-row-reverse wx-1 flex-wrap-reverse items-center justify-center px-7 py-2 md:gap-4 gap-2 gap-y-1 bg-[#171616] rounded-3xl">
-  <div id="a6" class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
-      Resumen
-  </div>
-  <div id="a5" class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
-      Opcionales >
-  </div>
-  <div id="a4" class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
-      Diseño >
-  </div>
-  <div id="a3" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
-      Motor >
-  </div>
-  <div id="a2"  class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
-      Paquete >
-  </div>
-  <div id="a1" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
-      Modelo >
-  </div>
-  <div id="a0" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
-      Marcas >
-  </div>
-</div>
+    <div
+        class="w-fit flex flex-row-reverse wx-1 flex-wrap-reverse items-center justify-center px-7 py-2 md:gap-4 gap-2 gap-y-1 bg-[#171616] rounded-3xl">
+        <div id="a6" class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
+            Resumen
+        </div>
+        <div id="a5" class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
+            Opcionales >
+        </div>
+        <div id="a4" class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
+            Diseño >
+        </div>
+        <div id="a3" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
+            Motor >
+        </div>
+        <div id="a2" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
+            Paquete >
+        </div>
+        <div id="a1" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
+            Modelo >
+        </div>
+        <div id="a0" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
+            Marcas >
+        </div>
+    </div>
 
-<!-- Bread crumb hasta aqui -->
+    <!-- Bread crumb hasta aqui -->
     <ng-container #container></ng-container>
     <div class="flex items-center gap-2 mt-10">
         <button *ngIf="currentStep() > 0" (click)="previous()"
