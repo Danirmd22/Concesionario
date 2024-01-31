@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DialogComponent } from '../dialog/dialog.component';
+import { RegisterComponent } from '../register/register.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -24,11 +25,12 @@ export class HeaderComponent {
   openRegisterDialog() {
     let dialogRef;
 
-    dialogRef = this.dialog.open(DialogComponent, {
+    dialogRef = this.dialog.open(RegisterComponent, {
       maxWidth: '100vW',
       height: '100%',
       width: '100%',
       position: { bottom: '0px' },
     });
   }
+
 }
