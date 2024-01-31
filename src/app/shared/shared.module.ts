@@ -10,8 +10,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormField } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-
-
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -19,6 +19,8 @@ import { MatInputModule } from '@angular/material/input';
     HeaderComponent,
     FooterComponent,
     DialogComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

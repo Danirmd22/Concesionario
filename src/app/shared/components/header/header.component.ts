@@ -27,9 +27,9 @@ export class HeaderComponent {
 
     dialogRef = this.dialog.open(RegisterComponent, {
       maxWidth: '100vW',
-      height: '100%',
-      width: '100%',
-      position: { bottom: '0px' },
+      height: '80%',
+      width: '60%',
+      position: { bottom: '60px' }
     });
   }
 
