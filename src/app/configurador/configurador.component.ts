@@ -11,10 +11,6 @@ import { ElementRef, AfterViewInit } from '@angular/core';
 
 
 
-// ... importa los demás componentes aquí
-
-
-
 @Component({
   selector: 'app-configurador',
   templateUrl: './configurador.component.html',
@@ -42,6 +38,7 @@ export class ConfiguradorComponent implements AfterViewInit {
       this.container.createComponent(factory);
     });
   }
+  
 // Boton automatico de next
   ngAfterViewInit(): void {
     // Simular un clic en el botón "Siguiente" al cargar la página
