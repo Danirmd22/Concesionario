@@ -1,0 +1,75 @@
+<div class="flex h-screen">
+    <div class="w-1/2">
+        <img class="h-full object-cover -mt-20"
+            src="https://www.audi.es/content/dam/nemo/es/home/Destacados/2023/Q4-etron_1920x1080.jpg?imwidth=1920"
+            alt="">
+    </div>
+    <div class="flex flex-col w-1/2 px-10 items-center justify-center">
+        <a class="font-semibold absolute right-10 top-24 rounded-md hover:bg-slate-200/30 p-3" href="">Iniciar
+            sesión</a>
+        <form class="text-center -mt-36 w-[60%]" [formGroup]="registerForm">
+            <p class="text-2xl font-bold">Crea una cuenta</p>
+            <p class="leading-[1px]">Introduce tus datos para registrarte</p>
+
+            <div class="relative mt-8 border border-red-500 p-3 rounded-md" *ngIf="registerForm.invalid && registerForm.touched">
+                <svg class="absolute top-4 left-4" width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.4449 0.608765C8.0183 -0.107015 6.9817 -0.107015 6.55509 0.608766L0.161178 11.3368C-0.275824 12.07 0.252503 13 1.10608 13H13.8939C14.7475 13 15.2758 12.07 14.8388 11.3368L8.4449 0.608765ZM7.4141 1.12073C7.45288 1.05566 7.54712 1.05566 7.5859 1.12073L13.9798 11.8488C14.0196 11.9154 13.9715 12 13.8939 12H1.10608C1.02849 12 0.980454 11.9154 1.02018 11.8488L7.4141 1.12073ZM6.8269 4.48611C6.81221 4.10423 7.11783 3.78663 7.5 3.78663C7.88217 3.78663 8.18778 4.10423 8.1731 4.48612L8.01921 8.48701C8.00848 8.766 7.7792 8.98664 7.5 8.98664C7.2208 8.98664 6.99151 8.766 6.98078 8.48701L6.8269 4.48611ZM8.24989 10.476C8.24989 10.8902 7.9141 11.226 7.49989 11.226C7.08567 11.226 6.74989 10.8902 6.74989 10.476C6.74989 10.0618 7.08567 9.72599 7.49989 9.72599C7.9141 9.72599 8.24989 10.0618 8.24989 10.476Z"
+                        fill="rgb(248 113 113)" fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+                <div class="w-3/4 flex flex-col text-xs text-red-500 text-left pl-10">
+                    <div *ngIf="registerForm.errors?.['notSame']">
+                        Las contraseñas no coinciden
+                    </div>
+                    <div *ngIf="registerForm.controls['email'].invalid">
+                        Email es requerido y debe ser válido
+                    </div>
+                    <div *ngIf="registerForm.controls['password'].invalid">
+                        Contraseña es requerida y debe tener al menos 8 caracteres
+                    </div>
+                    <div *ngIf="registerForm.controls['password2'].invalid">
+                        Repetir contraseña es requerida y debe tener al menos 8 caracteres
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex mt-6 gap-3">
+                <input class="border border-gray-300 rounded-md p-2 w-1/2" type="text" name="nombre" id="nombre"
+                    placeholder="Nombre">
+                <input class="border border-gray-300 rounded-md p-2 w-1/2" type="text" name="apellidos" id="apellidos"
+                    placeholder="Apellidos">
+            </div>
+            <div>
+                <input formControlName="email" [ngClass]="{'input-error': registerForm.controls['email'].invalid && registerForm.controls['email'].touched}" class="border border-gray-300 rounded-md p-2 w-full mt-3" type="email"
+                    name="email" id="email" placeholder="Correo electrónico">
+            </div>
+            <div class="flex gap-3 mt-3">
+                <input formControlName="password" [ngClass]="{'input-error': registerForm.controls['password'].invalid && registerForm.controls['password'].touched} && registerForm.errors?.['notSame']" class="border border-gray-300 rounded-md p-2 w-full" type="password"
+                    name="password" id="password" placeholder="Contraseña">
+                <input formControlName="password2" [ngClass]="{'input-error': registerForm.controls['password2'].invalid && registerForm.controls['password2'].touched && registerForm.errors?.['notSame']}" class="border border-gray-300 rounded-md p-2 w-full" type="password"
+                    name="password2" id="password2" placeholder="Repetir contraseña">
+            </div>
+
+            <button [disabled]="registerForm.invalid"
+                class="mt-4 bg-black rounded-md w-full text-white font-medium py-2 disabled:bg-black/40 disabled:cursor-not-allowed">
+                Crear cuenta
+            </button>
+
+            <div class="mt-4">
+                <p class="px-8 text-center text-xs text-muted-foreground">
+                    Al hacer clic en "Crear cuenta", aceptas nuestros
+                    <a href="/terms" class="underline underline-offset-4 hover:text-primary">
+                        Términos de servicio
+                    </a>
+                    y
+                    <a href="/privacy" class="underline underline-offset-4 hover:text-primary">
+                        Política de privacidad
+                    </a>
+                    .
+                </p>
+            </div>
+
+        </form>
+    </div>
+</div>

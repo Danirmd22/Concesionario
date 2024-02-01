@@ -17,12 +17,15 @@ import localeEs from '@angular/common/locales/es';
 import { LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfiguradorModule } from './configurador/configurador.module';
+import { RegistroComponent } from './registro/registro.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
     AppComponent,
+    RegistroComponent,
     
   ],
   imports: [
@@ -34,8 +37,9 @@ registerLocaleData(localeEs);
     ModelsModule,
     ModelsSelectionModule,
     HttpClientModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    ConfiguradorModule,
+    ReactiveFormsModule,
   ],
   exports: [
     SharedModule,
