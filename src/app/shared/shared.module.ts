@@ -10,7 +10,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormField } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 
 
@@ -19,7 +18,6 @@ import { LoginComponent } from './components/login/login.component';
     HeaderComponent,
     FooterComponent,
     DialogComponent,
-    RegisterComponent,
     LoginComponent
   ],
   imports: [
