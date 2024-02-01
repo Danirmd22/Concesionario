@@ -30,7 +30,13 @@ export class FormStateService {
     }
   }
   //devuelve valor del paso actual
-  currentStepFn(){
+  currentStepFn() {
     return this.currentStep;
-      }
+  }
+
+  //hace el paso mediante click
+  currentClickfn(num: number) {
+    this._step.next(num);
+    this.currentStep = num; //Pone el step igualado al numero en el que esta.
+  }
 }

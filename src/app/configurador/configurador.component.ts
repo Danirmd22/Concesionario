@@ -50,29 +50,76 @@ export class ConfiguradorComponent implements AfterViewInit {
 
   next() {
     this.formState.nextStep();
-    this.breadCrubNext();
+    this.breadCrubBtn();
   }
 
   previous() {
     this.formState.previousStep();
-    this.breadCrubPrevious();
+    this.breadCrubBtn();
   }
 
   currentStep() {
     return this.formState.currentStepFn();
   }
 
-  //LOGICA PARA BREAD CRUMB HACIA ADELANTE
-  breadCrubNext() {
-    var vDom = 'a' + this.formState.currentStepFn();
+  //LOGICA PARA BREAD CRUMB HACIA ATRAS
+  breadCrubBtn() {
+    var vDom = 'a' + (this.formState.currentStepFn());
+    let numero = this.formState.currentStepFn();
+
     const editDom = document.getElementById(vDom);
-    editDom!.style.color = '#ece9e1';
+
+    editDom!.style.color = '#98928f';
+
+    for (let index = 0; index <= numero; index++) {
+      var vDom = 'a' + (index);
+      const editDom = document.getElementById(vDom);
+      editDom!.style.color = '#ece9e1';
+      editDom!.classList.value = 'cursor-pointer';
+    }
+    for (let index = numero + 1; index < 7; index++) {
+      var vDom2 = 'a' + (index);
+      const editDom = document.getElementById(vDom2);
+      editDom!.style.color = '#98928f';
+      editDom!.classList.value = 'cursor-not-allowed';
+    }
+
+
   }
 
-  //LOGICA PARA BREAD CRUMB HACIA ATRAS
-  breadCrubPrevious() {
-    var vDom = 'a' + (this.formState.currentStepFn() + 1);
-    const editDom = document.getElementById(vDom);
-    editDom!.style.color = '#98928f';
+  breadCrubClick(event: any) {
+    //recoge el evento
+    let id: string = event.target.id;
+    //Extrae el numero del id
+    const match = id.match(/\d+/);
+    if (match) {
+      // Convertir el resultado a un número entero
+      const numero = parseInt(match[0], 10);
+      //compara para hacer modificaciones y q no permita pasos para adelante
+      if (numero < (this.formState.currentStepFn())) {
+
+        //Pintar clicks
+
+        for (let index = 0; index <= numero; index++) {
+          var vDom = 'a' + (index);
+          const editDom = document.getElementById(vDom);
+          editDom!.style.color = '#ece9e1';
+          editDom!.classList.value = 'cursor-pointer';
+            }
+        for (let index = numero + 1; index < 7; index++) {
+          var vDom2 = 'a' + (index);
+          const editDom = document.getElementById(vDom2);
+          editDom!.style.color = '#98928f';
+          editDom!.classList.value = 'cursor-not-allowed';}
+        //Pintar clicks (Esto luego se va quitar cuando funcione steps)
+        //LLeva a el step
+        this.formState.currentClickfn(numero);
+
+      } else {
+        console.error('No puedes navegar hacia adelante');
+      }
+    }
   }
+
+
 }
