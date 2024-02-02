@@ -27,5 +27,15 @@ export class SelectedBrandService {
 
     changeSelectedBrand(brand: Brand | null) {
         this.selectedBrandSource.next(brand);
+        if (brand) {
+            localStorage.setItem('selectedBrand', JSON.stringify(brand));
+        } else {
+            localStorage.removeItem('selectedBrand');
+        }
+    }
+    
+    getSelectedBrand(): Brand | null {
+        const storedBrand = localStorage.getItem('selectedBrand');
+        return storedBrand ? JSON.parse(storedBrand) : null;
     }
 }

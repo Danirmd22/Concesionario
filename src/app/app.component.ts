@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { BrandService } from './configurador/brand-selection/service/brands.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

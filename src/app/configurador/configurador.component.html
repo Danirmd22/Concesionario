@@ -3,29 +3,30 @@
     <!-- Bread crumb -->
 
     <div
-        class="w-fit flex flex-row-reverse wx-1 flex-wrap-reverse items-center justify-center px-7 py-2 md:gap-4 gap-2 gap-y-1 bg-[#171616] rounded-3xl">
-        <div id="a6" class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
-            Resumen
-        </div>
-        <div id="a5" class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
-            Opcionales >
-        </div>
-        <div id="a4" class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
-            Diseño >
-        </div>
-        <div id="a3" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
-            Motor >
-        </div>
-        <div id="a2" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
-            Paquete >
-        </div>
-        <div id="a1" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
-            Modelo >
-        </div>
-        <div id="a0" class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
-            Marcas >
-        </div>
+    class="w-fit flex flex-row-reverse wx-1 flex-wrap-reverse items-center justify-center px-7 py-2 md:gap-4 gap-2 gap-y-1 bg-[#171616] rounded-3xl">
+    <div class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
+      <a (click)="breadCrubClick($event)" id="a6" class="">Resumen</a>
     </div>
+    <div class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
+      <a (click)="breadCrubClick($event)" id="a5" class="">Opcionales ></a>
+    </div>
+    <div class="text-[#98928f] text-sm font-normal tracking-[0] whitespace-nowrap">
+      <a (click)="breadCrubClick($event)" id="a4" class=""> Diseño ></a>
+    </div>
+    <div class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
+      <a (click)="breadCrubClick($event)" id="a3" class=""> Motor ></a>
+    </div>
+    <div class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
+      <a (click)="breadCrubClick($event)" id="a2" class=""> Paquete ></a>
+    </div>
+    <div class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
+      <a (click)="breadCrubClick($event)" id="a1" class=""> Modelo ></a>
+    </div>
+    <div class="text-[#98928f]  text-sm font-normal tracking-[0] whitespace-nowrap">
+      <a (click)="breadCrubClick($event)" id="a0" class="cursor-pointer">
+        Marcas ></a>
+    </div>
+  </div>
 
     <!-- Bread crumb hasta aqui -->
     <ng-container #container></ng-container>
