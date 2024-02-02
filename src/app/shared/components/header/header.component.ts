@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DialogComponent } from '../dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +19,18 @@ export class HeaderComponent {
       height: '80%',
       width: '100%',
       position: { bottom: '0px' },
+    });
+  }
+  openDialogLogin() {
+    let dialogLogin;
+
+    dialogLogin = this.dialog.open(LoginComponent, {
+      maxWidth: 'fit-content',
+      height: 'auto',
+      width: 'auto',
+      maxHeight:'fit-content',
+
+
     });
   }
 }

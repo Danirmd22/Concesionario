@@ -1,0 +1,43 @@
+<!-- Container -->
+<div class="flex justify-center items-center ">
+
+  <!-- Login component -->
+  <div class="flex flex-col md:flex-row shadow-md">
+
+    <!-- Login form -->
+    <div class="bg-white rounded-l-md md:rounded-l-none md:rounded-tl-md p-8 md:w-1/2">
+      <!-- Heading -->
+      <div class="text-center mb-6">
+        <p class="text-2xl font-bold">Iniciar Sesión</p>
+        <p class="leading-[1px]">Introduce tus datos para iniciar</p>
+      </div>
+
+      <!-- Form -->
+      <form class="mb-6">
+        <div class="mb-4">
+          <label class="block mb-2 text-sm font-semibold" for="email">Email</label>
+          <input class="w-full border border-gray-300 rounded-md py-2 px-3" type="email" name="email" id="email" placeholder="Ingresa tu correo electrónico">
+        </div>
+
+        <div class="mb-6">
+          <label class="block mb-2 text-sm font-bold" for="password">Contraseña</label>
+          <input class="w-full border border-gray-300 rounded-md py-2 px-3" type="password" name="password" id="password" placeholder="Ingresa tu contraseña">
+        </div>
+
+        <button class="w-full bg-black rounded-md text-white font-medium py-2 ">Iniciar Sesión</button>
+      </form>
+
+      <p class="text-xs text-muted-foreground text-center">
+        Al hacer clic en "Iniciar Sesión", aceptas nuestros
+        <a href="/terms" class="underline hover:text-primary">Términos de servicio</a>
+        y
+        <a href="/privacy" class="underline hover:text-primary">Política de privacidad</a>.
+      </p>
+    </div>
+
+    <!-- Login banner -->
+    <div class="md:w-1/2 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1635519882377-752ca9927226?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+    </div>
+
+  </div>
+</div>
